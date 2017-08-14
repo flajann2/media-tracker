@@ -32,4 +32,5 @@
     # Testing!!!!
     # Web development (BONUS)
 ** Design
-   I will use
+   I will use API Blueprint for JSON API Documentation.
+   https://apiblueprint.org/documentation/tutorial.html
