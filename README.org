@@ -1,24 +1,35 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Media Tracker
+** Introduction
+   Media Tracker is a challenge application. As such,
+   I wanted it to be of actual use for myself.
+   Basically, I have a rather large collection
+   of media I wish to track. Books, music, research
+   papers, and more. This servervs as a general
+   tracker that has an API as well as
+   a front-end single-page app that uses the
+   API itself.
+** Requirements for this Project
+*** API
+    JSON / REST
+*** Authenication
+*** User modes
+**** Admin
+     Has access to everything.
+**** User
+     Can read everything, but only update and delete
+     his own records.
+**** Guest
+     Read access only
+*** Other Requirements
+    # At least 2 different models
+    # Models 1 to many relationship
+    # Seeds files with at least one record of sample data for each model.
+    # API documented!!!!
+*** Looking to access
+    # RoR
+    # API Design / REST
+    # OOP / Clean Code / SOLID
+    # Testing!!!!
+    # Web development (BONUS)
+** Design
+   I will use
