@@ -14,17 +14,11 @@ gem 'devise'
 gem 'devise_token_auth'
 gem 'omniauth'
 gem 'pg_search'
-
+gem 'opal-rails'
 gem 'coffee-rails', '~> 4.2'
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
+gem 'haml-rails'
+gem 'opal-rspec-rails', github: 'opal/opal-rspec-rails'
 gem 'jbuilder', '~> 2.5'
-# Use Redis adapter to run Action Cable in production
-# gem 'redis', '~> 3.0'
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
-
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
 
 group :development, :test do
   gem 'api_blueprint'
