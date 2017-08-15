@@ -6,7 +6,7 @@ class CreateMedia < ActiveRecord::Migration[5.1]
       t.string :metadata
       t.string :uri
       t.string :media_type
-
+      t.references :consumable, polymorphic: true, index: true
       t.timestamps
     end
     add_index :media, :title

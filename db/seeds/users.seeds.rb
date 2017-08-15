@@ -1,8 +1,17 @@
+# This creates both users and media entries.
+
 SAMPLE_USERS =[
   [{email: 'user@example.com',
     password: 'password1',
-    password_confirmation: 'password1'}
-  ],
+    password_confirmation: 'password1'},
+
+   [{title: "Transformers - Age of Extinction",
+     description: "Action-packed Robot movie.",
+     metadata: %[{published: 2014, resolution: "720p", origin:  "BluRay"}],
+     uri: "file:/media/alveric/torrent-alpha/Transformers - Age of Extinction (2014) 720p BluRay-4893613.mp4",
+     media_type: "film"
+    }
+   ]],
 
   [{email: 'fred@example.com',
     password: 'password2',
@@ -42,10 +51,9 @@ SAMPLE_USERS =[
 SAMPLE_USERS.each do |user, media_list|
   unless User.exists?(email: user[:email])
     u = User.create!(**user)
-
     unless media_list.nil?
       media_list.each do |medium|
-        u.create_medium!(**medium)
+        u.media.create!(**medium)
       end
     end
   end

@@ -50,8 +50,11 @@ ActiveRecord::Schema.define(version: 20170815130439) do
     t.string "metadata"
     t.string "uri"
     t.string "media_type"
+    t.string "consumable_type"
+    t.bigint "consumable_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["consumable_type", "consumable_id"], name: "index_media_on_consumable_type_and_consumable_id"
     t.index ["title"], name: "index_media_on_title"
   end
 
