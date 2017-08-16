@@ -26,17 +26,16 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'rspec-rails', '~> 3.6'
   gem 'factory_girl_rails'
-  gem 'shoulda-matchers'
-  gem 'database_cleaner'
+  gem 'shoulda-matchers', git: 'https://github.com/thoughtbot/shoulda-matchers.git', branch: 'rails-5'
   gem 'faker'
 end
-
 
 group :development do
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'guard-rspec', require: false
   gem "pry", "~> 0"
   gem "pry-byebug", "~> 3"
   gem "pry-doc", "~> 0"

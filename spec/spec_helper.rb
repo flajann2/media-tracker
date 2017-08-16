@@ -1,11 +1,4 @@
-require 'database_cleaner'
-
-Shoulda::Matchers.configure do |config|
-  config.integrate do |with|
-    with.test_framework :rspec
-    with.library :rails
-  end
-end
+require 'factory_girl'
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
@@ -13,17 +6,6 @@ RSpec.configure do |config|
   end
 
   config.include FactoryGirl::Syntax::Methods
-
-  config.before(:suite) do
-    DatabaseCleaner.clean_with(:truncation)
-    DatabaseCleaner.strategy = :transaction
-  end
-
-  config.around(:each) do |example|
-    DatabaseCleaner.cleaning do
-      example.run
-    end
-  end
 
   config.mock_with :rspec do |mocks|
     mocks.verify_partial_doubles = true
