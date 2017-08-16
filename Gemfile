@@ -17,7 +17,6 @@ gem 'pg_search'
 gem 'opal-rails'
 gem 'coffee-rails', '~> 4.2'
 gem 'haml-rails'
-gem 'opal-rspec-rails', github: 'opal/opal-rspec-rails'
 gem 'jbuilder', '~> 2.5'
 
 group :development, :test do
