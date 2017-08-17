@@ -1,4 +1,23 @@
-* Media Tracker
+* Media Tracker                                                    :TOC_5_gh:
+  - [[#introduction][Introduction]]
+  - [[#requirements-for-this-project][Requirements for this Project]]
+  - [[#design][Design]]
+    - [[#api][API]]
+      - [[#user-management-admin-privs-only][User Management (admin privs only)]]
+        - [[#add-new-user][Add new user]]
+        - [[#remove-user][Remove user]]
+        - [[#add-new-admin][Add new Admin]]
+        - [[#remove-admin][Remove Admin]]
+      - [[#media-management-all-users-and-admins][Media Management (all users and admins)]]
+        - [[#add-new-medium][Add new medium]]
+        - [[#delete-medium][Delete medium]]
+        - [[#modify-medium][Modify medium]]
+      - [[#media-discovery][Media Discovery]]
+        - [[#browse-media][Browse Media]]
+        - [[#search-media][Search Media]]
+  - [[#notes][Notes]]
+    - [[#devise][Devise]]
+
 ** Introduction
    Media Tracker is a challenge application. As such,
    I wanted it to be of actual use for myself.
@@ -9,31 +28,47 @@
    a front-end single-page app that uses the
    API itself.
 ** Requirements for this Project
-*** API
-    JSON / REST
-*** Authenication
-*** User modes
-**** Admin
-     Has access to everything.
-**** User
-     Can read everything, but only update and delete
-     his own records.
-**** Guest
-     Read access only
-*** Other Requirements
-    # At least 2 different models
-    # Models 1 to many relationship
-    # Seeds files with at least one record of sample data for each model.
-    # API documented!!!!
-*** Looking to access
-    # RoR
-    # API Design / REST
-    # OOP / Clean Code / SOLID
-    # Testing!!!!
-    # Web development (BONUS)
 ** Design
    I will use API Blueprint for JSON API Documentation.
    https://apiblueprint.org/documentation/tutorial.html
+
+   Basically, this will allow searching and management
+   of the media entries. No functionality to actually
+   launch a media player is planned in this phase.
+*** API
+    Basically, we need to be able to set and retrive
+    entries in the media table, and to be able to do
+    a full text search on the description and perhaps
+    the metadata as well.
+
+    User-level users will have read access to everything, but
+    only modify their own records.
+
+    Admins are gods. They can do everything to all records,
+    as well as add new users and admins.
+**** User Management (admin privs only)
+***** Add new user
+***** Remove user
+***** Add new Admin
+***** Remove Admin
+      Be sure there is a root admin that cannot be deleted.
+**** Media Management (all users and admins)
+     All users can read or see or search for all media in the
+     database, but users can only modify his own entries.
+***** Add new medium
+***** Delete medium
+***** Modify medium
+
+**** Media Discovery
+***** Browse Media
+      # Optionally filter by media type
+      # Must paginate for finds over 100 (default) or settable
+***** Search Media
+      # Search for media by title and descriptio
+      # Special searching for metadata?
+      # Optionally filter by media type
+      # Must paginate for finds over 100 (default) or settable
+
 ** Notes
 *** Devise
     Some setup you must do manually if you haven't yet:

@@ -8,7 +8,10 @@ Bundler.require(*Rails.groups)
 
 module MediaTracker
   class Application < Rails::Application
-    # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.1
+    config.api_only = true
+    config.debug_exception_response_format = :default
+    config.debug_exception_response_format = :api
+    config.middleware.use Rack::MethodOverride
  end
 end
