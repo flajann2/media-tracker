@@ -2,7 +2,7 @@
 
 SAMPLE_USERS =[
   [{email: 'user@example.com',
-    password: 'password1',
+    password_digest: 'password1',
     password_confirmation: 'password1'},
 
    [{title: "Transformers - Age of Extinction",
@@ -14,7 +14,7 @@ SAMPLE_USERS =[
    ]],
 
   [{email: 'fred@example.com',
-    password: 'password2',
+    password_digest: 'password2',
     password_confirmation: 'password2'},
 
    [{title: "2001: A Space Odyssey",
@@ -33,17 +33,17 @@ SAMPLE_USERS =[
    ]],
 
   [{email: 'sofie@example.com',
-    password: 'password3',
+    password_digest: 'password3',
     password_confirmation: 'password3'
    }],
 
   {email: 'noir@example.com',
-   password: 'password4',
+   password_digest: 'password4',
    password_confirmation: 'password4'
   },
 
   {email: 'artemis@example.com',
-   password: 'password5',
+   password_digest: 'password5',
    password_confirmation: 'password5'
   }
 ]

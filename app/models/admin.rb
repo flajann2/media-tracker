@@ -1,9 +1,6 @@
-class Admin < ActiveRecord::Base
-  devise :database_authenticatable, :registerable,
-          :recoverable, :rememberable, :trackable, :validatable,
-          :confirmable, :omniauthable
-
-  include DeviseTokenAuth::Concerns::User
+class Admin < ApplicationRecord
+  has_secure_password
+  #attr_accessor :password_digest
 
   has_many :media, as: :consumable
 end

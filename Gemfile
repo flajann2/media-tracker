@@ -10,10 +10,7 @@ gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.7'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
-gem 'jwt', '~> 1.5', '>= 1.5.6'
-gem 'devise'
-gem 'devise_token_auth'
-gem 'omniauth'
+gem 'knock'
 gem 'pg_search'
 gem 'opal-rails'
 gem 'coffee-rails', '~> 4.2'
@@ -30,6 +27,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'shoulda-matchers', git: 'https://github.com/thoughtbot/shoulda-matchers.git', branch: 'rails-5'
   gem 'faker'
+  gem 'pry-rails'
 end
 
 group :development do

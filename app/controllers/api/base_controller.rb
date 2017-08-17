@@ -1,6 +1,7 @@
 class Api::BaseController < ApplicationController
-  include DeviseTokenAuth::Concerns::SetUserByToken
+  include Knock::Authenticable
+
   respond_to :json
 
-  before_action :authenticate_api_auth_user!
+  before_action :authenticate_user
 end
