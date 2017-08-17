@@ -1,6 +1,6 @@
 class Api::BaseController < ApplicationController
+  include DeviseTokenAuth::Concerns::SetUserByToken
   respond_to :json
 
-  skip_before_action :verify_authenticity_token
-  before_action :ensure_authentication
+  before_action :authenticate_api_auth_user!
 end

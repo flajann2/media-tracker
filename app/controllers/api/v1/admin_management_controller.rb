@@ -1,7 +1,7 @@
 module Api
   module V1
-    class AdminManagementController < ApplicationController
-      skip_before_action :verify_authenticity_token
+    class AdminManagementController < Api::BaseController
+      #skip_before_action :verify_authenticity_token
 
       def show
       end
