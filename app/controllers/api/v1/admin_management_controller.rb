@@ -3,13 +3,16 @@ module Api
     class AdminManagementController < ApplicationController
       skip_before_action :verify_authenticity_token
 
+      def show
+      end
+
+      def index
+      end
+
       def add
       end
 
       def delete
-      end
-
-      def show
       end
 
       def edit

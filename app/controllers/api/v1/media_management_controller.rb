@@ -1,20 +1,20 @@
-module Api
-  module V1
-    class MediaManagementController < ApplicationController
-      def add
-      end
+class Api::V1::MediaManagementController < Api::BaseController
 
-      def delete
-      end
+  def show
+  end
 
-      def show
-      end
+  def index
+  end
 
-      def search
-      end
+  def add
+  end
 
-      def edit
-      end
-    end
+  def delete
+  end
+
+  def search
+  end
+
+  def edit
   end
 end
