@@ -18,6 +18,8 @@ gem 'opal-rails'
 gem 'coffee-rails', '~> 4.2'
 gem 'haml-rails'
 gem 'jbuilder', '~> 2.5'
+gem 'rabl-rails'
+gem 'oj'
 
 group :development, :test do
   gem 'api_blueprint'
