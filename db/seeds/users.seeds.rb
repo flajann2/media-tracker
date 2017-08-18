@@ -1,7 +1,10 @@
-# This creates both users and media entries.
+# This creates users, media, and notes entries.
+# Because of the
 
 SAMPLE_USERS =[
-  [{email: 'user@example.com',
+  [{name: "Franz Liszt",
+    role: "user",
+    email: 'user@example.com',
     password: 'password1',
     password_confirmation: 'password1'},
 
@@ -13,7 +16,9 @@ SAMPLE_USERS =[
     }
    ]],
 
-  [{email: 'fred@example.com',
+  [{name: "Federic Chopin",
+    role: "user",
+    email: 'fred@example.com',
     password: 'password2',
     password_confirmation: 'password2'},
 
@@ -32,20 +37,26 @@ SAMPLE_USERS =[
     }
    ]],
 
-  [{email: 'sofie@example.com',
+  [{name: "Sofie",
+    role: "user",
+    email: 'sofie@example.com',
     password: 'password3',
     password_confirmation: 'password3'
    }],
 
-  {email: 'noir@example.com',
-   password: 'password4',
-   password_confirmation: 'password4'
-  },
+  [{name: "Artemis",
+    role: "guest",
+    email: 'noir@example.com',
+    password: 'password4',
+    password_confirmation: 'password4'
+  }],
 
-  {email: 'artemis@example.com',
-   password: 'password5',
-   password_confirmation: 'password5'
-  }
+  [{name: "Noir",
+    role: "guest",
+    email: 'artemis@example.com',
+    password: 'password5',
+    password_confirmation: 'password5'
+   }]
 ]
 
 SAMPLE_USERS.each do |user, media_list|
@@ -57,4 +68,8 @@ SAMPLE_USERS.each do |user, media_list|
       end
     end
   end
+end
+
+Medium.all.each do |medium|
+  medium.notes.create!(note: "The is wonderful media.")
 end

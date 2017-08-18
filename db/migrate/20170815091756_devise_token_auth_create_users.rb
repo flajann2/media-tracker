@@ -6,10 +6,10 @@ class DeviseTokenAuthCreateUsers < ActiveRecord::Migration[5.1]
       t.string :nickname
       t.string :email, null: false
       t.string :password_digest
+      t.string :role
 
       ## Tokens
       t.json :tokens
-
       t.timestamps
     end
 
