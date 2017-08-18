@@ -8,5 +8,17 @@ example_id                                                  | status  | run_time
 ./spec/models/medium_spec.rb[1:5]                           | passed  | 0.0018 seconds  |
 ./spec/models/medium_spec.rb[1:6]                           | passed  | 0.00151 seconds |
 ./spec/models/user_spec.rb[1:1]                             | passed  | 0.03171 seconds |
+./spec/requests/api/v1/auth/user_auth_spec.rb[1:1]          | failed  | 0.30144 seconds |
+./spec/views/admin_management/add.html.haml_spec.rb[1:1]    | unknown |                 |
+./spec/views/admin_management/delete.html.haml_spec.rb[1:1] | unknown |                 |
 ./spec/views/admin_management/edit.html.haml_spec.rb[1:1]   | pending | 0.00002 seconds |
+./spec/views/admin_management/show.html.haml_spec.rb[1:1]   | unknown |                 |
+./spec/views/media_management/add.html.haml_spec.rb[1:1]    | unknown |                 |
 ./spec/views/media_management/delete.html.haml_spec.rb[1:1] | pending | 0.00001 seconds |
+./spec/views/media_management/edit.html.haml_spec.rb[1:1]   | unknown |                 |
+./spec/views/media_management/search.html.haml_spec.rb[1:1] | unknown |                 |
+./spec/views/media_management/show.html.haml_spec.rb[1:1]   | unknown |                 |
+./spec/views/user_management/add.html.haml_spec.rb[1:1]     | unknown |                 |
+./spec/views/user_management/delete.html.haml_spec.rb[1:1]  | unknown |                 |
+./spec/views/user_management/edit.html.haml_spec.rb[1:1]    | unknown |                 |
+./spec/views/user_management/show.html.haml_spec.rb[1:1]    | unknown |                 |

@@ -1,8 +1,9 @@
 FactoryGirl.define do
   factory :medium do
-    title "MyString"
-    description "MyString"
-    metadata "MyString"
-    uri "MyString"
+    title "Good ole Movie"
+    description "Best movie ever"
+    media_type "film"
+    metadata {published: 2001}.to_json
+    uri "file:/MyString"
   end
 end

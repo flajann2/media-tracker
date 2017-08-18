@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     scope module: :v1, constraints: ApiConstraints.new(version: 1, default: true) do
       namespace :auth do
         post 'user_token' => 'user_token#create'
+        post 'admin_token' => 'admin_token#create'
       end
 
       resources :media_management

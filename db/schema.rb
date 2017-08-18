@@ -18,7 +18,6 @@ ActiveRecord::Schema.define(version: 20170815130439) do
   create_table "admins", force: :cascade do |t|
     t.string "name"
     t.string "nickname"
-    t.string "image"
     t.string "email", null: false
     t.string "password_digest"
     t.json "tokens"
@@ -44,7 +43,6 @@ ActiveRecord::Schema.define(version: 20170815130439) do
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "nickname"
-    t.string "image"
     t.string "email", null: false
     t.string "password_digest"
     t.json "tokens"
